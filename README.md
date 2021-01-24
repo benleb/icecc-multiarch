@@ -21,5 +21,9 @@ See [workflow](.github/workflows/build.yml) for available `--platform`s
 ## local build
 
 ```bash
-docker buildx build --file icecc.Dockerfile --tag icecc-multiarch:dev --platform linux/arm64,linux/amd64 --load .
+# native arch
+docker buildx build ---tag icecc-multiarch:dev --load .
+
+# given arch(s)
+docker buildx build ---tag icecc-multiarch:dev --platform linux/arm64,linux/amd64 --load .
 ```
