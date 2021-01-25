@@ -13,7 +13,7 @@ docker run --rm --platform linux/amd64 --net host ghcr.io/benleb/icecc-multiarch
 docker run --rm --platform linux/arm/v7 --net host ghcr.io/benleb/icecc-multiarch:latest -vv
 
 # arm/v6
-docker run --rm --platform linux/arm/v7 --net host ghcr.io/benleb/icecc-multiarch:latest -vv
+docker run --rm --platform linux/arm/v6 --net host ghcr.io/benleb/icecc-multiarch:latest -vv
 ```
 
 See [workflow](.github/workflows/build.yml) for available `--platform`s
