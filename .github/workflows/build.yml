@@ -17,11 +17,12 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: ghcr.io/benleb/icecc-multiarch
-          tag-sha: false
+          tag-sha: true
+          tag-custom: latest
           tag-latest: true
-          tag-semver: |
-            {{version}}
-            {{major}}.{{minor}}
+          # tag-semver: |
+          #   {{version}}
+          #   {{major}}.{{minor}}
 
       - {name: Set up QEMU, uses: docker/setup-qemu-action@v1}
       - {name: Set up Docker Buildx, uses: docker/setup-buildx-action@v1}
