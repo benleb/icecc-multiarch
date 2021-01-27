@@ -17,7 +17,8 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: ghcr.io/benleb/icecc-multiarch
-          tag-sha: true
+          tag-sha: false
+          tag-latest: true
           tag-semver: |
             {{version}}
             {{major}}.{{minor}}
