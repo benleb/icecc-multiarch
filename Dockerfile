@@ -13,7 +13,7 @@ ENV RUNSH /run.sh
 
 # create run script with random id
 RUN echo '#!/usr/bin/env bash\n\n' > "${RUNSH}" && \
-    echo 'ICECC_NODE_ID="$((RANDOM + 1024))"\nICECC_NODE="${HOSTNAME}_${ICECC_NODE_ID}"\n\n' >> "${RUNSH}" && \
+    echo 'ICECC_NODE_ID="$((RANDOM + 1024))"\nICECC_NODE="${HOSTNAME}_${MACHTYPE/-*/}_${ICECC_NODE_ID}"\n\n' >> "${RUNSH}" && \
     echo 'exec $(command -v iceccd) -N "${ICECC_NODE}" --port "${ICECC_NODE_ID}" "$@"\n' >> "${RUNSH}" && \
     chmod +x "${RUNSH}"
 
