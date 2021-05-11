@@ -47,7 +47,7 @@ jobs:
         with:
           push: true
           context: .
-          file: ./demo/Dockerfile
+          file: ./Dockerfile
           tags: |
             ghcr.io/benleb/icecc-multiarch:latest
           platforms: ${{ matrix.platform }}
